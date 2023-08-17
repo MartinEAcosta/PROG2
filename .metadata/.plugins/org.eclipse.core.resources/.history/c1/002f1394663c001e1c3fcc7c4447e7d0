@@ -1,0 +1,9 @@
+
+public class Main{
+	
+	public static void main(String[] args){
+		
+		Persona a = new Persona(10);
+		System.out.println(a.getEdad());
+	}
+}

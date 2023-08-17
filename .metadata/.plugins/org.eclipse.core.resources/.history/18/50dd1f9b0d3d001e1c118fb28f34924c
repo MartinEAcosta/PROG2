@@ -1,0 +1,98 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Calendar;
+
+//	ATRIBUTOS
+public class Persona {
+	
+	private String nombre;
+	private String apellido;
+	private LocalDate fnac;
+	private int dni;
+	private String sexo;
+	private double peso;
+	private double altura;
+	
+	//	CONSTRUCTORES
+	public Persona() {
+		fnac = LocalDate.of(2000, 1, 1);
+		sexo = "F";
+		nombre = "N";
+		apellido = "N";
+		peso = 1;
+		altura = 1;
+	}
+	
+	public Persona(int dni) {
+		this.nombre = "N";
+		this.apellido = "N";
+		this.fnac = LocalDate.of(2000, 1, 1);
+		this.sexo = "F";
+		this.peso = 1;
+		this.altura = 1;
+	}
+	
+	// METODOS
+	public String getInfoPersona() {
+		return nombre + "," + apellido + "," + sexo;
+	}
+	
+	public LocalDate getFnac() {
+		return fnac;
+	}
+	
+	public double getPeso(){
+		return peso;
+	}
+	
+	public double getAltura() {
+		return altura;
+	}
+	
+	public double getIMC(){
+		double imc = peso/(altura*altura);
+		return imc;
+	}
+	
+	public int getEdad() {
+		Period calculoEdad = Period.between(fnac, LocalDate.now());
+		int edad = calculoEdad.getYears();
+		return edad;
+	}
+	
+	public boolean estaEnForma() {
+		double imc = this.getIMC();
+		if((imc>=18.5) && (imc<=25)) 
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean cumpleAños() {
+		Period cumple = Period.between(fnac, LocalDate.now());
+		if((cumple.getDays() == 0) && (cumple.getMonths() == 0))
+			return true;
+		else
+			return false;
+	}
+	public void setNombre (String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+	
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+	
+}
