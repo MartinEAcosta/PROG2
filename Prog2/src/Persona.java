@@ -44,7 +44,7 @@ public class Persona {
 	
 	// METODOS
 	public String getInfoPersona() {
-		return "Nombre:" + nombre + "," + "Apellido: " + apellido + "," + "Sexo: " + sexo + ", DNI :" + dni + ", Nacio: " + fnac + "Altura: " + altura + "Peso: " + peso;
+		return "Nombre:" + nombre + "," + " Apellido: " + apellido + "," + " Sexo: " + sexo + ", DNI: " + dni + ", Nacio: " + fnac + " Altura: " + altura + " Peso: " + peso;
 	}
 	
 	public LocalDate getFnac() {
