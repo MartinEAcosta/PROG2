@@ -6,7 +6,7 @@ public class Main {
 		
 		Jugador pepe = new Jugador("pp");
 		Jugador kach = new Jugador("kach");
-		Juego juego1 = new Juego(7,pepe,kach);
+		Juego juego1 = new Juego(12,pepe,kach, 4);
 		
 		juego1.jugar();
 		
