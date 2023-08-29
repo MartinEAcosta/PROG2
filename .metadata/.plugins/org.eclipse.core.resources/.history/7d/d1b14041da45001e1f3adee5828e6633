@@ -1,0 +1,10 @@
+package TP2.Establecimiento;
+
+public class Cancha {
+
+	private String tipo;
+	
+	private static final int precioFut = 400;
+	private static final int precioPad = 100;
+	private static final double descuento = 0.1;
+}

@@ -1,0 +1,14 @@
+package TP2.Sistema;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Ciudad tandil = new Ciudad("Tandil",100000,1);
+		Ciudad aya = new Ciudad("aya",100000,1);
+		Provincia bsas = new Provincia("bsas");
+		
+		System.out.println(bsas.getCantidadCiudades());
+	}
+
+}

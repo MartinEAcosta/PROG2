@@ -1,0 +1,14 @@
+package TP2.Agenda;
+
+import java.util.ArrayList;
+
+public class Agenda {
+	
+	private ArrayList<Reunion> Reuniones;
+	
+	public Agenda() {
+		this.Reuniones = new ArrayList<>();
+	}
+	
+	
+}

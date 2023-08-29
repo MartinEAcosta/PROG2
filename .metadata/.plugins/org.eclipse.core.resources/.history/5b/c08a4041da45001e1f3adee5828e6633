@@ -1,0 +1,52 @@
+package TP2.Establecimiento;
+
+public class Usuario {
+
+	
+	private String nombre;
+	private String contraseña;
+	private boolean socio;
+	private int cantalq;
+	
+	private static int minimoParaSocio = 4;
+	
+	
+	public Usuario(String nombre, String contraseña) {
+		this.nombre = nombre;
+		this.contraseña = contraseña;
+		this.socio = false;
+		this.cantalq = 0;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getContraseña() {
+		return contraseña;
+	}
+
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+	}
+
+	public boolean isSocio() {
+		if(cantalq >= minimoParaSocio) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public void setSocio(boolean socio) {
+		this.socio = socio;
+	}
+	
+	
+	
+}

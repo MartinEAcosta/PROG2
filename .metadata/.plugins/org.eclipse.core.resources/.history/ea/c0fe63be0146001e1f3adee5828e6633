@@ -1,0 +1,46 @@
+package TP2.Establecimiento;
+
+import java.util.ArrayList;
+
+public class Cancha {
+
+	private String tipo;
+	
+	private ArrayList<Cancha> Canchas;
+	
+	private static final int precioFut = 400;
+	private static final int precioPad = 100;
+	private static final double descuento = 0.1;
+	
+	public Cancha(String tipo) {
+		this.tipo = tipo;
+		this.Canchas = new ArrayList<>();
+	}
+	
+	public void addCancha(Cancha nueva) {
+		if(!this.Canchas.contains(nueva)) {
+			this.Canchas.add(nueva);
+		}
+		else {
+			System.out.println("La cancha ya se encuentra agregada");
+		}
+	}
+	
+	public void removeCancha(Cancha existente) {
+		if(this.Canchas.contains(existente)) {
+			this.Canchas.remove(existente);
+		}
+		else {
+			System.out.println("No es posible remover una cancha que no existe.");
+		}
+	}
+	
+	public boolean estaOcupada() {
+		if(this.Canchas.)
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,24 @@
+package TP2;
+
+import java.util.ArrayList;
+
+public class Temporada {
+
+	private int numero;
+	private ArrayList<Episodio> episodios;
+	
+	public Temporada(int numero) {
+		this.numero = numero;
+		this.episodios = new ArrayList<>();
+	}
+	
+	public void addEpisodio(Episodio e) {
+		this.episodios.add(e);
+	}
+	
+	public void getEpisodiosVistos() {
+		this.episodios.get(0);
+	}
+	
+	
+}

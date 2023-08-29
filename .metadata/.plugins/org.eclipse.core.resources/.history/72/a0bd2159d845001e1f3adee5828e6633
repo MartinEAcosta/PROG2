@@ -1,0 +1,13 @@
+package TP2.Establecimiento;
+
+import java.util.ArrayList;
+
+public class AdministradorCancha {
+
+	
+	private ArrayList<Cancha> Canchas;
+	
+	public AdministradorCancha() {
+		
+	}
+}

@@ -1,0 +1,10 @@
+package TP2.Agenda;
+
+public class Agenda {
+	
+	//defino atributos 
+	private String lugar;
+	private String tema;
+	
+	
+}

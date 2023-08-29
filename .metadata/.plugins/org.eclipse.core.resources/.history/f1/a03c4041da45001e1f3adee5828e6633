@@ -1,0 +1,31 @@
+package TP2.Establecimiento;
+
+import java.util.ArrayList;
+
+public class OrganizarTurno {
+	
+	private ArrayList<Cancha> Canchas;
+	
+	public OrganizarTurno() {
+		this.Canchas = new ArrayList<>();
+	}
+
+	public ArrayList<Cancha> getCanchas() {
+		return Canchas;
+	}
+
+	public void setCanchas(ArrayList<Cancha> canchas) {
+		Canchas = canchas;
+	}
+	
+	public void addCancha(Cancha x) {
+		if(!this.Canchas.contains(x)) {
+			this.Canchas.add(x);
+		}
+		else {
+			System.out.println("Esa cancha ya se encuentra añadida");
+		}
+	}
+	
+	
+}

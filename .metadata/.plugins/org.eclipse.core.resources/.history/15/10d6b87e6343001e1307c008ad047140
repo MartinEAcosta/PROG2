@@ -1,0 +1,78 @@
+package TP2.Agenda;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+public class Reunion {
+	
+	private String ubicacion;
+	private String tema;
+	private LocalDate fecha;
+	private LocalTime hora;
+	private LocalTime duracion;
+	private ArrayList<Persona> Personas;
+	
+	public Reunion(String ubicacion, String tema,LocalDate fecha, LocalTime hora, LocalTime duracion) {
+		this.ubicacion = ubicacion;
+		this.tema = tema;
+		this.fecha = fecha;
+		this.hora = hora;
+		this.duracion = duracion;
+		this.Personas = new ArrayList<>();
+	}
+
+	public String getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+
+	public String getTema() {
+		return tema;
+	}
+
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+
+	public LocalDate getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(LocalDate fecha) {
+		this.fecha = fecha;
+	}
+
+	public LocalTime getHora() {
+		return hora;
+	}
+
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
+	}
+
+	public LocalTime getDuracion() {
+		return duracion;
+	}
+
+	public void setDuracion(LocalTime duracion) {
+		this.duracion = duracion;
+	}
+
+	public ArrayList<Persona> getPersonas() {
+		return Personas;
+	}
+
+	public void setPersonas(ArrayList<Persona> personas) {
+		Personas = personas;
+	}
+	
+	public void addPersonas(Persona x) {
+		if(!this.Personas.contains(x)) {
+			this.Personas.add(x);
+			System.out.println("Persona agregada con exito.");
+	}
+}

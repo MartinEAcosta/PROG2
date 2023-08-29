@@ -1,0 +1,20 @@
+package TP2.Establecimiento;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Usuario martin = new Usuario ("martin","contraseña");
+		Cancha c1 = new Cancha(martin,"f",LocalDate.of(2023,8, 28),LocalTime.of(18, 30));
+		
+		AdministradorCancha adm = new AdministradorCancha();
+		
+		adm.addCancha(c1);
+		System.out.println(c1.getPrice("f"));
+	}
+
+}

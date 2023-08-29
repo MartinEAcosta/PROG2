@@ -1,0 +1,38 @@
+package TP2.Establecimiento;
+
+import java.util.ArrayList;
+
+public class AdministradorCancha {
+	
+	private ArrayList<Cancha> Canchas;
+	
+	public AdministradorCancha() {
+		this.Canchas = new ArrayList<>();
+	}
+	
+	public void getCanchas() {
+		for(Cancha c : Canchas) {
+			System.out.println(c.toString());
+		}
+	}
+	
+	public void addCancha(Cancha nueva) {
+		if(!this.Canchas.contains(nueva)) {
+			this.Canchas.add(nueva);
+		}
+		else {
+			System.out.println("El turno que estas intentando agregar esta ocupado.");
+		}
+	}
+	
+	public void removeCancha(Cancha existente) {
+		if(this.Canchas.contains(existente)) {
+			this.Canchas.remove(existente);
+		}
+		else {
+			System.out.println("El turno que estas intentado remover no existe.");
+		}
+	}
+	
+	
+}

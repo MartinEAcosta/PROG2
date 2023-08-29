@@ -1,0 +1,11 @@
+package TP2.Establecimiento;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Usuario martin = new Usuario("martin","hola123");
+		
+		
+	}
+
+}

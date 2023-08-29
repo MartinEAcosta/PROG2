@@ -1,0 +1,24 @@
+package TP2;
+
+public class Episodio {
+	
+	private String titulo;
+	private String descripcion;
+	private int visto;
+	private int calificacion;
+	private int prueba, prueba2;
+	
+	public Episodio(int visto, int calificacion) {
+		this.visto = visto;
+		this.calificacion = calificacion;
+		
+	}
+	
+	
+	public void calificar(int calificacion) {
+		if(calificacion >= 0 && calificacion <= 5)
+			this.calificacion = calificacion;
+		else
+			System.out.println("El valor ingresado como calificacion no es correcto, no se ha actualizado el valor.");
+	}
+}

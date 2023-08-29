@@ -1,0 +1,59 @@
+package TP2.Establecimiento;
+
+public class Usuario {
+
+	private String nombre;
+	private String password;
+	public int vecesAlq;
+	public boolean socio;
+	
+	public static final int serSocio = 4;
+	
+	public Usuario (String nombre, String password) {
+		this.nombre = nombre;
+		this.password = password;
+		this.vecesAlq = 0;
+		this.socio = false;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public int getVecesAlq() {
+		return vecesAlq;
+	}
+
+	public void setVecesAlq(int vecesAlq) {
+		this.vecesAlq = vecesAlq;
+	}
+
+	public boolean isSocio() {
+		if(vecesAlq >= serSocio) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public void setSocio(boolean socio) {
+		this.socio = socio;
+	}
+	
+	
+	
+	
+}

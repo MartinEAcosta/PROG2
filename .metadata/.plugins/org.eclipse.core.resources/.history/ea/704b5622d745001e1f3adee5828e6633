@@ -1,0 +1,68 @@
+package TP2.Establecimiento;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+public class Cancha {
+	
+	private String tipo;
+	private int precio;
+	private LocalDate dia;
+	private LocalTime hora;
+	
+	private ArrayList<Cancha> Canchas;
+	
+	public Cancha(String tipo, int precio, LocalDate dia, LocalTime hora) {
+		this.tipo = tipo;
+		this.precio = precio;
+		this.dia = dia;
+		this.hora = hora;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+
+	public LocalDate getDia() {
+		return dia;
+	}
+
+	public void setDia(LocalDate dia) {
+		this.dia = dia;
+	}
+
+	public LocalTime getHora() {
+		return hora;
+	}
+
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
+	}
+
+	public void addCancha(Cancha nuevaCancha) {
+		if(!this.Canchas.contains(nuevaCancha)) {
+			this.Canchas.add(nuevaCancha);
+		}
+	}
+	
+	public void removeCancha(Cancha eliminarEstaCancha) {
+		if(this.Canchas.contains(eliminarEstaCancha)) {
+			this.Canchas.remove(eliminarEstaCancha);
+		}
+	}
+	
+	
+}

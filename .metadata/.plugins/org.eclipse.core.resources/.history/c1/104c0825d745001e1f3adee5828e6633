@@ -1,0 +1,39 @@
+package TP2.Establecimiento;
+
+import java.util.ArrayList;
+
+public class AdministradorCancha {
+
+	
+	private ArrayList<Usuario> Usuarios;
+	
+	public AdministradorCancha() {
+		this.Usuarios = new ArrayList<>();
+	}
+	
+	public ArrayList<Usuario> getUsuarios() {
+		return Usuarios;
+	}
+
+	public void setUsuarios(ArrayList<Usuario> usuarios) {
+		Usuarios = usuarios;
+	}
+	
+	public void addUsuario(Usuario x) {
+		this.Usuarios.add(x);
+	}
+	
+	public void removeUsuario(Usuario x) {
+		if(this.Usuarios.contains(x))
+			this.Usuarios.remove(x);
+	}
+	
+	public String returnLibre() {
+		
+		return 
+	}
+	
+	public void usuarioReserva(Usuario x) {
+		
+	}
+}

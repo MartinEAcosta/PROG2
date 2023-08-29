@@ -1,0 +1,10 @@
+package TP2;
+
+public class Serie {
+	
+	private String titulo;
+	private String descripcion;
+	private String creador;
+	private String genero;
+	
+}

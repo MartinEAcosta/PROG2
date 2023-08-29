@@ -1,0 +1,45 @@
+package TP2.Establecimiento;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+public class Turno {
+	
+	private String deporte;
+	private LocalDate dia;
+	private LocalTime hora;
+	
+	
+	private Usuario user;
+	
+	private ArrayList<Turno> Turnos;
+	
+	private static final int precioFut = 400;
+	private static final int precioPad = 100;
+	private static final double descuento = 0.9;
+	
+	public Turno(Usuario user,String deporte, LocalDate dia, LocalTime hora) {
+		this.user = user;
+		this.deporte = deporte;
+		this.dia = dia;
+		this.hora = hora;
+		this.Turnos = new ArrayList<>();
+	}
+	
+	public int getPrice(String tipo) {
+		if(tipo == "f") {
+			if(this.user.isSocio())
+				return (int) (precioFut * descuento);
+			else
+				return precioFut;
+		}
+		else if(tipo == "p") {
+			if(this.user.isSocio())
+				return (int) (precioPad * descuento);
+			else
+				return precioPad;
+		}
+		return 0;
+	}
+}

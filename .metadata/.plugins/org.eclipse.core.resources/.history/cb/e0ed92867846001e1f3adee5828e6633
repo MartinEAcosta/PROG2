@@ -1,0 +1,45 @@
+package TP2.Establecimiento;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Cancha {
+	
+		private String tipo;
+		private LocalDate dia;
+		private LocalTime hora;
+		
+		
+		private Usuario user;
+		
+		private static final int precioFut = 400;
+		private static final int precioPad = 100;
+		private static final double descuento = 0.9;
+		
+		public Cancha(Usuario user,String tipo, LocalDate dia, LocalTime hora) {
+			this.user = user;
+			this.tipo = tipo;
+			this.dia = dia;
+			this.hora = hora;
+		}
+		
+		public int getPrice(String tipo) {
+			if(tipo == "f") {
+				if(this.user.isSocio())
+					return (int) (precioFut * descuento);
+				else
+					return precioFut;
+			}
+			else if(tipo == "p") {
+				if(this.user.isSocio())
+					return (int) (precioPad * descuento);
+				else
+					return precioPad;
+			}
+			return 0;
+		}
+		
+		
+		
+		
+}

@@ -1,0 +1,13 @@
+package TP2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Episodio e1 = new Episodio("1");
+		Temporada t1 = new Temporada(1);
+		
+		System.out.println(t1.getEpisodiosVistos());
+		
+	}
+
+}

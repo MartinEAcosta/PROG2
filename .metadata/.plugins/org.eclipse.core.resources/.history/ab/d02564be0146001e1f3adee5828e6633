@@ -1,0 +1,39 @@
+package TP2.Establecimiento;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Turnos {
+	
+	private LocalDate dia;
+	private LocalTime hora;
+	private Usuario user;
+	private Cancha cancha;
+	
+	public Turnos(LocalDate dia, LocalTime hora) {
+		this.dia = dia;
+		this.hora = hora;
+	}
+
+	public LocalDate getDia() {
+		return dia;
+	}
+
+	public void setDia(LocalDate dia) {
+		this.dia = dia;
+	}
+
+	public LocalTime getHora() {
+		return hora;
+	}
+
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
+	}
+	
+	public void reservarCancha(Usuario user, LocalTime hora, LocalTime dia) {
+		if(this.cancha.)
+	}
+	
+	
+}
