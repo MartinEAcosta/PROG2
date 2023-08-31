@@ -1,0 +1,50 @@
+package TP2.Peluqueria;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+public class Turno {
+
+	private LocalDate dia;
+	private LocalTime hora;
+	private Peluquero pe;
+	private Cliente cl;
+	
+	private ArrayList<Turno> Turnos;
+	
+	public Turno(LocalDate dia, LocalTime hora, Peluquero pe, Cliente cl) {
+		this.dia = dia;
+		this.hora = hora;
+		this.pe = pe;
+		this.cl = cl;
+	}
+
+	public LocalDate getDia() {
+		return dia;
+	}
+
+	public void setDia(LocalDate dia) {
+		this.dia = dia;
+	}
+
+	public LocalTime getHora() {
+		return hora;
+	}
+
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
+	}
+	
+	public boolean coincideConOtro(Turno nuevo) {
+		for(Turno existente : Turnos) {
+			if(!this.Turnos.equals(nuevo)) {
+				if(existente.getDia().equals(nuevo.getDia())) {
+					if(nuevo.getHora().equals(existente) || nuevo.getHora().is) {
+						return false;
+					}
+				}
+			}
+		}
+	}
+}

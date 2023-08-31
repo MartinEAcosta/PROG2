@@ -1,0 +1,17 @@
+package TP2.Establecimiento;
+
+import java.util.ArrayList;
+
+public class Registro {
+
+	private Turno turno;
+	ArrayList<Registro> Registros;
+	
+	public Registro() {
+		
+	}
+	
+	public void addRegistro(Turno x) {
+		this.addRegistro(x);
+	}
+}

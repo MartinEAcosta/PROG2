@@ -1,0 +1,64 @@
+package TP2.Establecimiento;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+public class Cancha {
+	
+		private String tipo;
+		private String nombre;
+		
+		private ArrayList<Turno> Turnos;
+		
+		public Cancha(String tipo,String nombre) {
+			this.tipo = tipo;
+			this.nombre = nombre;
+			this.Turnos = new ArrayList<>();
+		}
+
+
+		public void addTurno(Turno nuevo) {
+			if(this.coincideConOtro(nuevo))
+				this.Turnos.add(nuevo);
+		}
+		
+		public boolean coincideConOtro(Turno x) {
+			for(Turno turn : Turnos) {
+				if(x.getDia().isEqual(turn.getDia())){
+					if(x.getHora().isAfter(turn.getHora()) && x.getHora().isBefore(turn.getHoraFin())){
+						System.out.println("El turno que quieres elegir ya ha sido reservado.");
+						return false;
+					}
+					else if(x.getHora().equals(turn.getHora())) {
+						System.out.println("La hora elegida coincide con otro turno.");
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+		
+		public String getTipo() {
+			return tipo;
+		}
+
+
+
+		public void setTipo(String tipo) {
+			this.tipo = tipo;
+		}
+
+
+
+		public String getNombre() {
+			return nombre;
+		}
+
+
+
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+		
+}

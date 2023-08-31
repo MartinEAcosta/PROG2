@@ -9,41 +9,60 @@ public class Cancha {
 		private String tipo;
 		private String nombre;
 		
-		private ArrayList<Cancha> Canchas;
-		
+		private ArrayList<Turno> Turnos;
 		
 		public Cancha(String tipo,String nombre) {
 			this.tipo = tipo;
 			this.nombre = nombre;
-			this.Canchas = new ArrayList<>();
-		}
-		
-
-		public void getCanchas() {
-			for(Cancha c : Canchas) {
-				System.out.println(c.toString());
-			}
-		}
-		
-		public void addCancha(Cancha nueva) {
-			if(!this.Canchas.contains(nueva)) {
-				this.Canchas.add(nueva);
-			}
-			else {
-				System.out.println("El turno que estas intentando agregar esta ocupado.");
-			}
-		}
-		
-		public void removeCancha(Cancha existente) {
-			if(this.Canchas.contains(existente)) {
-				this.Canchas.remove(existente);
-			}
-			else {
-				System.out.println("El turno que estas intentado remover no existe.");
-			}
+			this.Turnos = new ArrayList<>();
 		}
 
+
+		public void addTurno(Turno nuevo) {
+			if(this.coincideConOtro(nuevo)) {
+				this.Turnos.add(nuevo);
+				System.out.println("Turno creado con exito.");
+				System.out.println(nuevo.getPrice(nuevo.getDeporte()));
+			}
+		}
 		
+		public boolean coincideConOtro(Turno x) {
+			for(Turno turn : Turnos) {
+				
+					if(x.getDia().isEqual(turn.getDia())){
+						if(x.getHora().isAfter(turn.getHora()) && x.getHora().isBefore(turn.getHoraFin())){
+							System.out.println("El turno que quieres elegir ya ha sido reservado.");
+							return false;
+						}
+						else if(x.getHora().equals(turn.getHora())) {
+							System.out.println("La hora elegida coincide con otro turno.");
+							return false;
+						}
+					}
+			}
+			return true;
+		}
 		
+		public String getTipo() {
+			return tipo;
+		}
+
+
+
+		public void setTipo(String tipo) {
+			this.tipo = tipo;
+		}
+
+
+
+		public String getNombre() {
+			return nombre;
+		}
+
+
+
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
 		
 }

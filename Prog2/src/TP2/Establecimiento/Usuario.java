@@ -54,7 +54,4 @@ public class Usuario {
 	public void setVecesalq(int vecesalq) {
 		this.vecesalq = vecesalq;
 	}
-	
-	
-	
 }

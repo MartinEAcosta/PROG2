@@ -6,9 +6,11 @@
     <fullyQualifiedTypeName name="Clase2208.p2.Rectangulo"/>
     <fullyQualifiedTypeName name="Clase2208.p2.MedioCirculo"/>
     <fullyQualifiedTypeName name="Clase2408.PrismaRectangular"/>
-    <fullyQualifiedTypeName name="java.time.LocalTime"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.Month"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="TP2.Peluqueria.Turno"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,14 @@
+package TP2.Peluqueria;
+
+import java.time.LocalDate;
+
+public class Cliente {
+
+	private String nombre;
+	private boolean clienteFrecuente;
+	private LocalDate ultVez;
+	
+	public Cliente() {
+		
+	}
+}

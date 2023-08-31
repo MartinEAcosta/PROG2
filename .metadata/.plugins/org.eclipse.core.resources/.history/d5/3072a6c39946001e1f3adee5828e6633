@@ -1,0 +1,30 @@
+package Clase2908;
+
+public class ColeccionDinamica {
+	//encapsulamiento
+	private Object[] datos;
+	private int contador;
+	
+	public ColeccionDinamica() {
+		datos = new Object[10];
+		contador = 0;
+	}
+
+	public void addElemento(Object o1) {
+		datos[contador]=o1;
+		contador++;
+	}
+	
+	public Object getElemento(int pos) {
+		if(pos >= 0 && pos < contador)
+			return datos[pos];
+		else
+			return null;
+	}
+	
+	public int getSize() {
+		return contador;
+	}
+	
+	
+}
