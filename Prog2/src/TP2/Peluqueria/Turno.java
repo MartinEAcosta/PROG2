@@ -14,12 +14,8 @@ public class Turno {
 	
 	private Peluquero Turnos;
 	
-	
 	private static final int tiempoMinimo = 10;
-	private static final int tiempoPredeterminado = 30;
 	private static final double descuento = 0.1;
-	private static final LocalTime comienzoHorario = LocalTime.of(8, 00);
-	private static final LocalTime finalizaHorario = LocalTime.of(20, 30);
 	
 	public Turno(LocalDate dia, LocalTime hora, Peluquero pe, Cliente cl) {
 		this.dia = dia;
@@ -45,20 +41,6 @@ public class Turno {
 		this.hora = hora;
 	}
 	
-	public void addTurno(Turno nuevo) {
-		if(!this.Turnos.contains(nuevo)) {
-			if(estaDentroHorario(nuevo)) {
-				if(!nuevo.coincideConOtro(nuevo)) {
-					this.Turnos.add(nuevo);
-				}
-			}
-			else {
-				System.out.println("No se ha podido añadir el turno, debido a que coincide con otro.");
-				System.out.println("Por favor, busque otro horario.");
-			}
-		}
-	}
-	
 	public void setHoraFin(Turno existente,int termina) {
 		existente.getHoraFin(termina);
 	}
@@ -71,30 +53,6 @@ public class Turno {
 			return getHora().plusMinutes(termina);
 		}
 		
-	}
-	
-	public boolean estaDentroHorario(Turno nuevo) {
-		if(nuevo.getHora().isAfter(comienzoHorario) && nuevo.getHoraFin(tiempoPredeterminado).isBefore(finalizaHorario)) {
-				return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
-	public boolean coincideConOtro(Turno nuevo) {
-		for(Turno existente : Turnos) {
-			if(!this.Turnos.equals(nuevo)) {
-				if(nuevo.getDia().equals(existente.getDia())) {
-					if(nuevo.getHora().equals(existente)) {
-						if(nuevo.getHora().isAfter(existente.getHora()) && nuevo.getHora().isBefore(existente.getHoraFin(tiempoPredeterminado))) {
-							return true;
-						}
-					}
-				}
-			}
-		}
-		return false;
 	}
 	
 	public int getPrecio() {

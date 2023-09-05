@@ -1,0 +1,13 @@
+package TP4.AlarmaSensorial;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+	Alarma casa = new Alarma();
+	Sensor Cocina = new Sensor("Puerta Cocina");
+	
+	casa.addSensor(Cocina);
+	casa.comprobar();
+	}
+}	

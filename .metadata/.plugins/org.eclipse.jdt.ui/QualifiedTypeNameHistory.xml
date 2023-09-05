@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="Clase2208.p2.Figura"/>
     <fullyQualifiedTypeName name="Clase2208.p2.Rectangulo"/>
     <fullyQualifiedTypeName name="Clase2208.p2.MedioCirculo"/>
     <fullyQualifiedTypeName name="Clase2408.PrismaRectangular"/>
     <fullyQualifiedTypeName name="java.time.Month"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
-    <fullyQualifiedTypeName name="java.time.LocalTime"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="TP2.Peluqueria.Turno"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="TP3.SisEncuestas.Encuesta"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
 </qualifiedTypeNameHistroy>

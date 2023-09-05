@@ -1,5 +1,0 @@
-package Clase2408;
-
-public class PrismaRectangular extends Figura3d {
-
-}
